@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DefinitionActivity"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/toolbar_definition"
+        layout = "@layout/toolbar_definition">
+    </include>
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingTop="50dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_below="@id/toolbar_definition">
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/txt_def_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text = "Word"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_def_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_light"
+            android:text = "class"
+            android:textSize="22sp"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/bookmark_change"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/ll_2"
+            android:background="@drawable/bookmark_seletor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:onClick="btn_change_click"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:paddingTop="20dp"
+            android:id="@+id/txt_def_def"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Definition"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:paddingHorizontal="15dp"
+            android:breakStrategy="simple"/>
+    </ScrollView>
+</RelativeLayout>
